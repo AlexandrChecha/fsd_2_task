@@ -1,0 +1,65 @@
+$primary-color:  #333;
+$dark-shade-100: rgba(31, 32, 65, 1);
+$dark-shade-75: rgba(31, 32, 65, .75);
+$dark-shade-50: rgba(31, 32, 65, .50);
+$dark-shade-25: rgba(31, 32, 65, .25);
+$dark-shade-5: rgba(31, 32, 65, .05);
+$purple: #bc9cff;
+$green: #6fcf97;
+
+$colors_name_set: ('dark-shade-100':$dark-shade-100, 
+				   'dark-shade-75': $dark-shade-75,
+				   'dark-shade-50': $dark-shade-50,
+				   'dark-shade-25': $dark-shade-25,
+				   'dark-shade-5': $dark-shade-5,
+				   'purple': $purple,
+				   'green': $green,);
+
+@font-face {
+	font-family: 'Quicksand-Bold';
+	src: url('../fonts/Quicksand/Quicksand-Bold.ttf') format('truetype'), 
+	url('../fonts/Quicksand/Quicksand-Bold.woff') format('woff'), 
+	url('../fonts/Quicksand/Quicksand-Bold.svg') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Quicksand-Regular';
+	src: url('../fonts/Quicksand/Quicksand-Regular.ttf') format('truetype'), 
+	url('../fonts/Quicksand/Quicksand-Regular.woff') format('woff'), 
+	url('../fonts/Quicksand/Quicksand-Regular.svg') format('svg');
+	font-weight:  normal;
+	font-style: normal;
+}
+
+body {
+	font-size: 19px;
+	color: $primary-color;
+	font-family: 'Quicksand-Bold', sans-serif;
+}
+
+.colors_item {
+	display: flex;
+	flex-flow: row no-wrap;
+}
+
+.colors_description {
+	span {
+	font-family: 'Quicksand-Regular', sans-serif;
+	text-transform: uppercase;
+	}
+}
+
+.colors_field {
+	width: 70px;
+	height: 70px;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+
+@each $field, $bgcolor in $colors_name_set {
+	.colors_field__#{$field} {
+		background-color: $bgcolor;
+	}
+}
