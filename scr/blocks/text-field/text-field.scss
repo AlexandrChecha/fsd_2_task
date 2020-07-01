@@ -1,0 +1,34 @@
+@import "../../sass/vars.scss";
+
+.text-field {
+	box-sizing: border-box;
+	max-width: 320px;
+	input[type='text'] {
+		height: 44px;
+		width: 100%;
+		border-radius: 4px;
+		border: 1px solid $dark-shade-25;
+		font: inherit;
+		padding-left: 15px;
+	}
+	
+	input[type='text']::placeholder {
+		
+	}
+
+	&__text {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	h3 {
+		padding: 5px 0;
+	}
+
+	span {
+		color: $dark-shade-50;
+		font-size: 12px;
+		text-transform: uppercase;
+	}
+
+}
