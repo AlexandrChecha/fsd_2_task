@@ -10,11 +10,14 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const PATHS = {
 	src: path.join(__dirname, 'scr', 'pages'),
 	dist: path.join(__dirname, 'dist'),
+	UIkit: path.join(__dirname, 'scr', 'pages', 'UIkit'),
 	assets: 'assets/',
 }
 
 const PAGES_DIR = `${PATHS.src}`
+const PAGES_UIkit = `${PATHS.UIkit}`
 const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
+const PAGES2 = fs.readdirSync(PAGES_UIkit).filter(fileName => fileName.endsWith('.pug'))
 
 module.exports = {
 	entry: './scr/pages/index.js',
@@ -96,6 +99,12 @@ module.exports = {
 
 		...PAGES.map(page => new HtmlWebpackPlugin ({
       	template: `${PAGES_DIR}/${page}`,
+      	filename: `./${page.replace(/\.pug/,'.html')}`
+
+		})),
+
+		...PAGES2.map(page => new HtmlWebpackPlugin ({
+      	template: `${PAGES_UIkit}/${page}`,
       	filename: `./${page.replace(/\.pug/,'.html')}`
 
 		})),
