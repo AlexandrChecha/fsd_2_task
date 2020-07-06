@@ -31,4 +31,12 @@
 		text-transform: uppercase;
 	}
 
+	input:hover, input:focused {
+		border: 1px solid $dark-shade-50;
+		color: $dark-shade-75;
+		&::placeholder {
+			color: $dark-shade-75;
+		}
+	}
+
 }

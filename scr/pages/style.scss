@@ -1,5 +1,6 @@
 @import "../sass/includes/includes.scss";
 @import "../blocks/text-field/text-field.scss";
+@import "../blocks/dropdown/dropdown.scss";
 
 $colors_name_set: ('dark-shade-100':$dark-shade-100, 
 				   'dark-shade-75': $dark-shade-75,
@@ -9,51 +10,8 @@ $colors_name_set: ('dark-shade-100':$dark-shade-100,
 				   'purple': $purple,
 				   'green': $green,);
 
-body, * {
-	margin: 0;
-	padding: 0;
-}
-
-body {
-	font-size: 14px;
-	color: $dark-shade-75;
-	font-family: 'Montserrat-Bold', sans-serif;
-	line-height: 24px;
-}
-
-h1 {
-	font-family: 'Quicksand-Bold', sans-serif;
-	color: $dark-shade-100;
-	font-size: 24px;
-	line-height: 30px;
-	margin: 0; padding: 0;
-}
-
-h2 {
-	font-family: 'Quicksand-Bold', sans-serif;
-	color: $dark-shade-100;
-	font-size: 19px;
-	line-height: auto;
-}
-
-h3 {
-	font-family: 'Montserrat-Bold', sans-serif;
-	color: $dark-shade-100;
-	font-size: 12px;
-	text-transform: uppercase;
-	line-height: 17px;
-}
-
-p {margin: 0; padding: 0;}
-
 .logo_svg {
 	margin: 30px 0 0 30px;
-}
-
-.wrapper {
-	margin: 0 auto;
-	max-width: 1440px;
-	//border: 2px solid black;
 }
 
 .colors-type {

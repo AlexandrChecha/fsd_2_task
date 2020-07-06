@@ -5,9 +5,34 @@ block vars
 
 block content
 	section#fields
-		div.text-field
-			div.text-field__text
-				label 
-					h3 text-field
-				span Default
-			input.text-field.field__text-field#text-field(type="text", placeholder="Email", name="text-field")
+		.wrapper
+			div.text-field
+				div.text-field__text
+					label 
+						h3 text-field
+					span Default
+				input.text-field.field__text-field#text-field(type="text", placeholder="Email", name="text-field")
+			div.text-field
+				div.text-field__text
+					label 
+						h3 text-field
+					span Hover/focus
+				input.text-field.field__text-field#text-field(type="text", placeholder="Email", name="text-field", autofocus, value="This is pretty awesome")
+			.dropdown
+				div.text-field__text
+					label 
+						h3 text-field
+					span Default
+				select(name="dropdown")
+					option(value="number" selected disabled) Сколько гостей
+					option(value="1") 1
+					option(value="2") 2
+			.iqdropdown
+				p.iqdropdown-selection Item-1
+					.iqdropdown-menu
+						.iqdropdown-menu-option(data-id="item1")
+							p.iqdropdown-item Item 
+							p.iqdropdown-description A short description
+						.iqdropdown-menu-option(data-id="item2")
+							p.iqdropdown-item Item 
+							p.iqdropdown-description A short description
