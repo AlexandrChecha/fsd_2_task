@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const fs = require('fs');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
+//const ItemQuantityDropdown = require('item-quantity-dropdown');
 
 
 
@@ -27,6 +28,10 @@ module.exports = {
 		filename: 'bundle.js'
 
 	},
+
+	// resolve: {
+ //        root: ['./node_modules']
+ //    },
 
 	devServer: {
 		contentBase: path.join(__dirname, 'dist'),
@@ -54,6 +59,23 @@ module.exports = {
 						loader: 'sass-loader',
 						// options: {
 
+						// },
+					},
+				],
+			},
+			{
+				test: /\.css$/,
+				use: [
+					{
+						loader: MiniCssExtractPlugin.loader,
+						// options: {
+							
+						// },
+					},
+					{
+						loader: 'css-loader',
+						// options: {
+							
 						// },
 					},
 				],

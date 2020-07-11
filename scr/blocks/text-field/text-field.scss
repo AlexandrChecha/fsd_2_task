@@ -3,7 +3,7 @@
 .text-field {
 	box-sizing: border-box;
 	max-width: 320px;
-	input[type='text'] {
+	input {
 		height: 44px;
 		width: 100%;
 		border-radius: 4px;
@@ -11,8 +11,8 @@
 		font: inherit;
 		padding-left: 15px;
 	}
-	
-	input[type='text']::placeholder {
+
+	input::placeholder {
 		
 	}
 
@@ -31,7 +31,7 @@
 		text-transform: uppercase;
 	}
 
-	input:hover, input:focused {
+	input:hover, input:focus {
 		border: 1px solid $dark-shade-50;
 		color: $dark-shade-75;
 		&::placeholder {
